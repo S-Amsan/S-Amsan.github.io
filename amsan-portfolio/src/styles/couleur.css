@@ -1,0 +1,8 @@
+:root {
+
+  --bleu: #008CFF;
+  --mauve: #C288FF;
+
+  --degradeVertical: linear-gradient(0deg, var(--mauve), var(--bleu));
+  --degradeHorizontal: linear-gradient(90deg, var(--mauve), var(--bleu));
+}

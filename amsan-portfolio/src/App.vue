@@ -1,11 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  // Components
+  import AppNavbar from '@/components/AppNavbar.vue'
+
+  // Sections
+  import Accueil from '@/sections/AccueilSection.vue'
+  import APropos from '@/sections/AProposSection.vue'
+  import Projets from '@/sections/ProjetsSection.vue'
+  import Contact from '@/sections/ContactSection.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <AppNavbar/>
+
+  <Accueil/>
+  <APropos/>
+  <Projets/>
+  <Contact/>
 </template>
 
 <style scoped></style>
