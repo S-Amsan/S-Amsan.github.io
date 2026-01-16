@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 
   type SectionId = "accueil" | "aPropos" | "projets" | "contact";
 
-  const liens = [
+  const liens: Array<{ id: SectionId; label: string }> = [
     {id : "accueil", label: "Accueil" },
     {id : "aPropos", label: "À propos" },
     {id : "projets", label: "Projets" },
@@ -16,9 +16,9 @@ import { onMounted, ref } from 'vue'
     activeSection.value = id as SectionId
     history.replaceState(null, '', `#${id}`)
 
-    document
-      .getElementById(id)
-      .scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const el = document.getElementById(id)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   onMounted(() => {
@@ -38,7 +38,7 @@ import { onMounted, ref } from 'vue'
 
     liens.forEach((lien) => {
       const section = document.getElementById(lien.id)
-      observer.observe(section)
+      if (section) observer.observe(section)
     })
   })
 
