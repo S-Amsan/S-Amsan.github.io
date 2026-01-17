@@ -10,7 +10,7 @@
 
       const anchor = document.createElement('a')
       anchor.href = fileUrl
-      anchor.download = 'test.pdf'
+      anchor.download = 'CV_Amsan_Sutharsan.pdf'
       document.body.appendChild(anchor)
       anchor.click()
       document.body.removeChild(anchor)
