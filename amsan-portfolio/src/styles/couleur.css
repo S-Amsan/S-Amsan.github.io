@@ -3,6 +3,27 @@
   --bleu: #008CFF;
   --mauve: #C288FF;
 
-  --degradeVertical: linear-gradient(0deg, var(--mauve), var(--bleu));
+  --degradeVertical: linear-gradient(to top, var(--mauve), var(--bleu));
+
   --degradeHorizontal: linear-gradient(90deg, var(--mauve), var(--bleu));
+}
+
+.text-degradé {
+  background: linear-gradient(
+    to bottom,
+    var(--bleu) 30%,
+    var(--mauve) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-degradé-calme {
+  background: linear-gradient(
+    to bottom,
+    var(--bleu),
+    var(--mauve)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

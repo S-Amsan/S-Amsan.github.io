@@ -4,7 +4,7 @@
 
 <template>
   <section id="contact">
-    <text>contact</text>
+    <text>contact, en cours de développement...</text>
   </section>
 </template>
 

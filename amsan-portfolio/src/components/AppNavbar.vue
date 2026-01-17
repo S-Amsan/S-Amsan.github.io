@@ -64,12 +64,17 @@ import { onMounted, ref } from 'vue'
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 15px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
+
+    backdrop-filter: blur(3px);
+
+    z-index: 10;
   }
 
   .lien {
@@ -82,6 +87,8 @@ import { onMounted, ref } from 'vue'
     background: var(--degradeVertical);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    user-select: none;
   }
 
   .lien::before {
@@ -91,6 +98,7 @@ import { onMounted, ref } from 'vue'
     left: 50%;
     width: 0;
     height: 2px;
+
     background: var(--degradeHorizontal);
     transform: translateX(-50%);
     transition: width 0.3s ease, opacity 0.3s ease;
